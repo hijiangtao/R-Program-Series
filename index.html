@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Simple Visual System</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The Simple Visual System">
+  <meta name="author" content="Joe Jiang">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>The Simple Visual System</h1>
+    <h2>Visualization of Stock and Census of America - Project of Coursera Course</h2>
+    <p>Joe Jiang<br/>Undergraduate Student in BIT</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why the Vis-App?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>The traditional Stock Data is too complicated to be observed by public, we need a more direct way to diliver the info to them; in the other hand, Census Data has the same problem. So I choose to visualize them by using R.</li>
+<li>A intractive Visualizing App will allow users to gain more info form the origin data, so I give some parameters to users, which allow them to complete and visual their ideal plot of stock and census data. </li>
+<li>Last but the most important point is because I need to complete a project for <strong>Developing Data Products</strong> Course on Coursera, haha..Forgive me..:)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What can it do?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>This is the demo effects of Vis-App. <a href="https://courseraassignment.shinyapps.io/Vis-App/">Project Link</a></li>
+<li>It can plot the specific stock history as well as the American Census Data in the way you like, you can choose different Data-Rnge, StockCode, Adjust prices for inflation or not, Different mode and so on.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/hijiangtao/R-Program-Series/master/Developing%20Data%20Products/Vis-App/www/Demo.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Structure of this App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let&#39;s hae a look at the <strong>sliderInput</strong> of <code>ui.R</code>&#39;s some part:</p>
+
+<pre><code>sliderInput(&quot;range&quot;, label = &quot;Range of interest:&quot;, min = 0, max = 100, value = c(5, 90))
+</code></pre>
+
+<p>The effect of my Vis-App is quite like the codes show below, since my data is supported by a single file and github doesn&#39;t support this kind of showing, I just show the car part.</p>
+
+<pre><code class="r">summary(cars)
+</code></pre>
+
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <p><strong>Extend:</strong> You can access more details at <a href="https://github.com/hijiangtao/R-Program-Series/tree/master/Developing%20Data%20Products/Vis-App">Github</a> or <a href="https://courseraassignment.shinyapps.io/Vis-App/">Vis-App</a>The foolowing codes shows my App&#39;s plot function theory.It&#39;s the extend of previours page.Thanks for watching!</p>
+
+<pre><code class="r">plot(cars, main=&quot;Cars Plot&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why the Vis-App?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What can it do?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Structure of this App'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title=''>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
